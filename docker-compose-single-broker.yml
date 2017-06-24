@@ -10,7 +10,7 @@ services:
       - "9092:9092"
     environment:
       KAFKA_ADVERTISED_HOST_NAME: ${KAFKA_IP}
-      KAFKA_CREATE_TOPICS: "ticker:2:1,tickerspecific:2:1,orderbook:2:1,nlp:2:1,signal:2:1,anomaly:2:1,eventlog:2:1,executioncommands:2:1"
+      KAFKA_CREATE_TOPICS: "ticker:2:1,tickerspecific:2:1,orderbook:2:1,nlp:2:1,signal:2:1,anomaly:2:1,eventlog:2:1,executioncommands:2:1,allticker:2:1"
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
